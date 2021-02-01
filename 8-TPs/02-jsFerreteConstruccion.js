@@ -10,8 +10,8 @@ let largo;
 let ancho;
 let alambre;
 
-largo = parseInt(document.getElementById("txtIdLargo").value);
-ancho = parseInt(document.getElementById("txtIdAncho").value);
+largo = parseFloat(document.getElementById("txtIdLargo").value);
+ancho = parseFloat(document.getElementById("txtIdAncho").value);
 
 alambre = (largo + ancho)*3;
 
@@ -24,9 +24,9 @@ function Circulo ()
     let radio;
     let alambre;
 
-    largo = parseInt(document.getElementById("txtIdLargo").value);
-    ancho = parseInt(document.getElementById("txtIdAncho").value);
-    radio = parseInt(document.getElementById("txtIdRadio").value);
+    largo = parseFloat(document.getElementById("txtIdLargo").value);
+    ancho = parseFloat(document.getElementById("txtIdAncho").value);
+    radio = parseFloat(document.getElementById("txtIdRadio").value);
 
     alambre = (largo + ancho + radio)*3;
 

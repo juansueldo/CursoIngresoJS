@@ -10,13 +10,13 @@ function Sumar ()
     let num3;
     let resultado;
 
-    num1 = parseInt(document.getElementById("txtIdPrecioUno").value);
-    num2 = parseInt(document.getElementById("txtIdPrecioDos").value);
-    num3 = parseInt(document.getElementById("txtIdPrecioTres").value);
+    num1 = parseFloat(document.getElementById("txtIdPrecioUno").value);
+    num2 = parseFloat(document.getElementById("txtIdPrecioDos").value);
+    num3 = parseFloat(document.getElementById("txtIdPrecioTres").value);
 
     resultado = num1 + num2 + num3;
 
-    alert("La suma de los precios es "+resultado);
+    alert("La suma es $"+resultado);
 }
 function Promedio () 
 {
@@ -25,13 +25,13 @@ function Promedio ()
     let num3;
     let resultado;
 
-    num1 = parseInt(document.getElementById("txtIdPrecioUno").value);
-    num2 = parseInt(document.getElementById("txtIdPrecioDos").value);
-    num3 = parseInt(document.getElementById("txtIdPrecioTres").value);
+    num1 = parseFloat(document.getElementById("txtIdPrecioUno").value);
+    num2 = parseFloat(document.getElementById("txtIdPrecioDos").value);
+    num3 = parseFloat(document.getElementById("txtIdPrecioTres").value);
 
     resultado = (num1 + num2 + num3)/3;
 
-    alert("El promedio de los precios es "+resultado);
+    alert("El promedio es $"+resultado);
 }
 function PrecioFinal () 
 {
@@ -41,9 +41,9 @@ function PrecioFinal ()
     let iva;
     let resultado;
 
-    num1 = parseInt(document.getElementById("txtIdPrecioUno").value);
-    num2 = parseInt(document.getElementById("txtIdPrecioDos").value);
-    num3 = parseInt(document.getElementById("txtIdPrecioTres").value);
+    num1 = parseFloat(document.getElementById("txtIdPrecioUno").value);
+    num2 = parseFloat(document.getElementById("txtIdPrecioDos").value);
+    num3 = parseFloat(document.getElementById("txtIdPrecioTres").value);
 
     iva = (num1 + num2 + num3)*21/100;
     resultado = num1 + num2 + num3 + iva;
