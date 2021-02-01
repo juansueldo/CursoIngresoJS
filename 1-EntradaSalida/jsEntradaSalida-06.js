@@ -6,12 +6,18 @@ function sumar()
 {
 	let numero1;
 	let numero2;
-
-
-	numero1 = document.getElementsByClassName("txtIdNumeroUno").value;
-	numero2 = document.getElementsByName("txtIdNumeroDos").value;
-
 	let resultado;
+/* otra forma de convertir la cadena de string que tomamos de la caja de texto es usando la funcion
+"parseInt":
+numero1 = document.getElementById("txtIdNumeroUno").value;
+numero1 = parseInt(numero1)
+
+ambas formas son validas, pero en un mismo ejercicio no mezclar, solo usar una forma*/
+	numero1 = parseInt(document.getElementById("txtIdNumeroUno").value);
+
+	numero2 = parseInt(document.getElementById("txtIdNumeroDos").value);
+
+	
 	resultado = numero1 + numero2;
 
 	
