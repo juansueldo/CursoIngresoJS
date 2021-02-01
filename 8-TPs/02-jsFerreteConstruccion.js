@@ -13,26 +13,41 @@ let alambre;
 largo = parseFloat(document.getElementById("txtIdLargo").value);
 ancho = parseFloat(document.getElementById("txtIdAncho").value);
 
-alambre = (largo + ancho)*3;
+alambre = ((largo + ancho)*2)*3;
+alambre = alambre. toFixed(2);
 
 alert("Se debe comprar "+alambre+" metros de alambre");
 }
 function Circulo () 
 {
-	let largo;
-    let ancho;
+	let perimetro;
     let radio;
-    let alambre;
+    let alambre
+    const PI = 3.14;
 
-    largo = parseFloat(document.getElementById("txtIdLargo").value);
-    ancho = parseFloat(document.getElementById("txtIdAncho").value);
     radio = parseFloat(document.getElementById("txtIdRadio").value);
+    perimetro = 2*PI*radio;
 
-    alambre = (largo + ancho + radio)*3;
+    alambre = perimetro*3;
+
+    alambre = alambre. toFixed(2);
 
     alert("Se debe comprar "+alambre+" metros de alambre");
 }
 function Materiales () 
 {
-	
+    let largo;
+    let ancho;
+    let area;
+    let cemento;
+    let cal;
+
+    largo = parseFloat(document.getElementById("txtIdLargo").value);
+    ancho = parseFloat(document.getElementById("txtIdAncho").value);
+    area= largo*ancho;
+    
+    cemento = area*2;
+    cal = area*3;
+
+    alert("Necesitamos "+cemento+" bolsas de cemento y "+cal+" bolsas de cal");
 }

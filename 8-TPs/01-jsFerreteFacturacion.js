@@ -31,6 +31,8 @@ function Promedio ()
 
     resultado = (num1 + num2 + num3)/3;
 
+    resultado = resultado. toFixed(2);
+
     alert("El promedio es $"+resultado);
 }
 function PrecioFinal () 
@@ -38,6 +40,7 @@ function PrecioFinal ()
     let num1;
     let num2;
     let num3;
+    let suma;
     let iva;
     let resultado;
 
@@ -45,8 +48,10 @@ function PrecioFinal ()
     num2 = parseFloat(document.getElementById("txtIdPrecioDos").value);
     num3 = parseFloat(document.getElementById("txtIdPrecioTres").value);
 
-    iva = (num1 + num2 + num3)*21/100;
-    resultado = num1 + num2 + num3 + iva;
+    suma = num1+num2+num3;
+    iva = suma *21/100;
+    resultado = suma + iva;
+    resultado = resultado. toFixed(2);
 
-    alert("El total de los precios más el 21% IVA es "+resultado);
+    alert("La suma más el IVA es $"+resultado);
 }
