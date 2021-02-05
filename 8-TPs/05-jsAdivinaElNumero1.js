@@ -32,5 +32,6 @@ function verificar()
 	else{
     alert("Siga intentando");
   }
+  contadorIntentos = 
   document.getElementById("txtIdIntentos").value = numeroIngresado;
 }

@@ -1,24 +1,23 @@
 function mostrar()
 {
-	let mesDelAño;
-	let enero = 1;
-	let marzo = 2;
-	let julio = 3;
-	let diciembre = 4;
+	let mes;
 
 	
 
-	mesDelAño= document.getElementById("txtIdMes").value;
-	switch(mesDelAño){
-		case 1:
-			alert("que comiences bien el año!!!.");
+	mes = document.getElementById("txtIdMes").value;
+	switch(mes){
+		case "Enero":
+			alert("Que comiences bien el año!!!.");
 			break;
-		case 2:
-			 alert("a clases!!!.");
-		case 3:
-			alert("se vienen las vacaciones!!!.");
-		case 4:
+		case "Marzo":
+			 alert("A clases!!!");
+			 break;
+		case "Julio":
+			alert("Se vienen las vacaciones!!!");
+			break;
+		case "Diciembre":
 			alert("Felices fiesta!!!.");
+			break;
 
 	}
 
