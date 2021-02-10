@@ -10,53 +10,62 @@ function mostrar()
 	estacionIngresada = document.getElementById("txtIdEstacion").value;
 	localidad = document.getElementById("txtIdDestino").value;
 
-	switch(estacionIngresada && localidad){
-		case "Invierno" && "Bariloche":
+	switch(estacionIngresada){
+		case "Invierno":
+			if(localidad == "Bariloche"){
 			aumento = PRECIO* 20/100;
 			precioFinal = PRECIO + aumento;
 			alert("El precio es $"+precioFinal);
-			break;
-		case "Invierno" && "Mar del plata":
+			}
+			else if(localidad == "Mar del plata"){
 			descuento = PRECIO *20/100;
 			precioFinal = PRECIO - descuento;
 			alert("El precio es $"+precioFinal);
-			break;
-		case "Invierno" && "Cataratas":
-		case "Invierno" && "Cordoba":
+			}
+			else{
 			descuento = PRECIO *10/100;
 			precioFinal = PRECIO - descuento;
 			alert("El precio es $"+precioFinal);
+			}
 			break;
-		case "Verano" && "Bariloche":
+		case "Verano":
+			if(localidad == "Bariloche"){
 			descuento = PRECIO* 20/100;
 			precioFinal = PRECIO - descuento;
 			alert("El precio es $"+precioFinal);
-			break;
-		case "Verano" && "Cataratas":
-		case "Verano" && "Cordoba":
-					aumento = PRECIO *10/100;
-					precioFinal = PRECIO + aumento;
-					alert("El precio es $"+precioFinal);
-					break;
-		case "Verano" && "Mar del plata":
+			}
+			else if(localidad == "Mar del plata"){
 				aumento = PRECIO *20/100;
 				precioFinal = PRECIO + aumento;
 				alert("El precio es $"+precioFinal);
-				break;
-		case "Otoño" && "Bariloche":
-		case "Primavera" && "Bariloche":
-		case "Otoño" && "Cataratas":
-		case "Primavera" && "Cataratas":
-		case "Otoño" && "Mar del plata":
-		case "Primavera" && "Mar del plata":
+			}
+			else{
 				aumento = PRECIO *10/100;
 				precioFinal = PRECIO + aumento;
-					alert("El precio es $"+precioFinal);
-					break;
-		case "Otoño" && "Cordoba":
-		case "Primavera" && "Cordoba":
+				alert("El precio es $"+precioFinal);
+				
+			}
+			break;
+		case "Otoño":
+			if(localidad != "Cordoba"){
+				aumento = PRECIO *10/100;
+				precioFinal = PRECIO + aumento;
+				alert("El precio es $"+precioFinal);
+			}
+			else{
 				alert("El precio es $"+PRECIO);
-				break;
+			}
+			break;
+		case "Primavera":
+			if(localidad != "Cordoba"){
+			aumento = PRECIO *10/100;
+			precioFinal = PRECIO + aumento;
+			alert("El precio es $"+precioFinal);
+		}
+		    else{
+			alert("El precio es $"+PRECIO);
+		}
+		break;
 	}
 
 
