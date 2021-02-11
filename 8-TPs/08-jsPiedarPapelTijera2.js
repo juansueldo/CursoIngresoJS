@@ -1,31 +1,53 @@
-var eleccionMaquina;
-var ContadorDeEmpates=0;
-var ContadorDeGanadas=0;
-var ContadorDePerdidas=0;
+let random = Math.round(Math.random()*2+1);
+let ContadorDeEmpates=0;
+let ContadorDeGanadas=0;
+let ContadorDePerdidas=0;
 
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 3
-	 	
+	alert("Comenzamos")
 
-
-
-}//FIN DE LA FUNCIÓN
-function piedra()
+	function piedra()
 {
-	
-
-}//FIN DE LA FUNCIÓN
-function papel()
-{
-
-}//FIN DE LA FUNCIÓN
-function tijera()
-{
-	
-}//FIN DE LA FUNCIÓN
-
-function mostrarResultado()
-{
-
+		if(random == 1){
+			alert("Empate");
+		}
+		else if(random == 2){
+			alert("Perdiste");
+			
+		}
+		else{
+			alert("Ganaste");
+			
 }
+}
+	function papel()
+	{
+		if(random == 1){
+			alert("Ganaste");
+		}
+		else if(random == 2){
+			alert("Empate");
+		}
+		else{
+			alert("Perdiste");
+		}
+			
+	}
+	function tijera()
+	{
+		if(random == 1){
+			alert("Perdiste");
+		}
+		else if(random == 2){
+			alert("Ganaste");
+		}
+		else{
+			alert("Empate");
+		}
+		
+}
+}/*document.getElementById("txtIdEmpatadas").value = ContadorDeEmpates++;
+document.getElementById("txtIdPerdidas").value = ContadorDePerdidas++;
+document.getElementById("txtIdGanadas").value = ContadorDeGanadas++;*/
+	

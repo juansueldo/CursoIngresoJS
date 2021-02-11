@@ -5,37 +5,50 @@ El jugador seleccionará una imagen correspondiente
 a su opción  y le informaremos si ganó, empató o perdió.
 */
 let random = Math.round(Math.random()*2+1);
-switch(random){
-    case 1:
-        alert("Piedra");
-        break;
-    case 2:
-        alert("Papel");
-        break;
-    case 3:
-        alert("Tijera");
-        break;
-                
-}
 
 function comenzar()
 {
-	
+    alert("Comenzamos");
+}
 
-
-}//FIN DE LA FUNCIÓN
+//FIN DE LA FUNCIÓN
 function piedra()
 {
 	
+    if(random == 1){
+        alert("Empate");
+    }
+    else if(random == 2){
+        alert("Perdiste");
+    }
+    else{
+        alert("Ganaste");
+    }
 
 }//FIN DE LA FUNCIÓN
 function papel()
 {
-
+    if(random == 1){
+        alert("Ganaste");
+    }
+    else if(random == 2){
+        alert("Empate");
+    }
+    else{
+        alert("Perdiste");
+    }
 
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
-	
+    if(random == 1){
+        alert("Perdiste");
+    }
+    else if(random == 2){
+        alert("Ganaste");
+    }
+    else{
+        alert("Empate");
+    }
 
 }//FIN DE LA FUNCIÓN
