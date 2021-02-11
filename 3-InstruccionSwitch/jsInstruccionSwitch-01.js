@@ -1,10 +1,22 @@
 function mostrar()
 {
-	let mes;
+let mes;
 
-	
-
-	mes = document.getElementById("txtIdMes").value;
+mes = document.getElementById("txtIdMes").value;
+/*
+if(mes == "Enero"){
+	alert("Que comiences bien el año!!!");
+}
+else if(mes == "Marzo"){
+	alert("A clases!!!");
+}
+else if(mes =="Julio"){
+	alert("Se vienen las vacaciones!!!");
+}
+else if(mes == "Diciembre"){
+	alert("Felices fiestas!!!");
+}
+*/
 	switch(mes){
 		case "Enero":
 			alert("Que comiences bien el año!!!.");
@@ -16,16 +28,9 @@ function mostrar()
 			alert("Se vienen las vacaciones!!!");
 			break;
 		case "Diciembre":
-			alert("Felices fiesta!!!.");
+			alert("Felices fiestas!!!.");
 			break;
 
 	}
-
-	//tomo el mes
-	/*
-	var mesDelAño =txtIdMes.value;
-	alert(mesDelAño);
-*/
-
 
 }//FIN DE LA FUNCIÓN
