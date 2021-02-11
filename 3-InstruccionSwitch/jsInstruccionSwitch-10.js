@@ -22,10 +22,30 @@ function mostrar()
 			alert("Se viaja");
 		}
 		else{
-			alert("No se viaja");s
+			alert("No se viaja");
 		}
+		break;
+		case "Verano":
+			if(localidad == "Mar del plata" || localidad == "Cataratas"){
+				alert("Se viaja")
+			}
+			else{
+				alert("No se viaja");
+			}
+			break;
+		case "Otoño":
+			alert("Se viaja");
+			break;
+		case "Primavera":
+			if(localidad == "Bariloche"){
+				alert("No se viaja");
+			}
+			else{
+				alert("Se viaja");
+			}
+			break;
+			
 	}
 
-	alert(estacionIngresada);
 
 }//FIN DE LA FUNCIÓN
