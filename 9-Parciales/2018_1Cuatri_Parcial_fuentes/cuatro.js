@@ -13,17 +13,16 @@ let resta;
 
 num1 = parseInt(prompt("Ingrese un numero"));
 num2 = parseInt(prompt("Ingrese un numero"));
-suma = (num1 + num2);
-resta = (num1 - num2);
+resta = num1 - num2;
 
 if(num1 == num2){
     alert(num1.toString() + num2.toString());
 }
 else if(num1 > num2){
-    alert(suma);
+    alert(resta = num1 - num2);
 }
 else{
-    alert(resta);
+    alert(suma = num1 + num2);
 }
 if(suma > 10){
     alert("La suma es "+suma+ " y supero el 10");
