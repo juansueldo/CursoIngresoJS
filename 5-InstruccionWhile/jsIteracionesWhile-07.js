@@ -2,17 +2,12 @@
 Al presionar el botón pedir  números  hasta que el USUARIO QUIERA 
 e informar la suma acumulada y el promedio.
 */
-function mostrar()
-{
-	var contador;
-	var acumulador;
-	var respuesta;
-	contador=0;
-	acumulador=0;
-	respuesta='si';
+function mostrar() {
+  let seguir = 's';
 
-
-	txtIdSuma.value=acumulador;
-	txtIdPromedio.value=acumulador/contador;
-
-}//FIN DE LA FUNCIÓN
+  while (seguir == 's') {
+    alert("Hola");
+    seguir = prompt("Quiere continuar?");
+  }
+  alert("Entonces ya terminamos.");
+} //FIN DE LA FUNCIÓN
