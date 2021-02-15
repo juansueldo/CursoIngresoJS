@@ -10,20 +10,40 @@ hasta que el usuario quiera, mostrar:
 7-Promedio de positivos.
 8-Promedios de negativos.
 9-Diferencia entre positivos y negativos, (positvos-negativos). */
-function mostrar()
-{
+function mostrar() {
 	//declarar contadores y variables 
-	var respuesta;
-	var numeroIngresado;
-	var sumaNegativos=0;
+	let num;
+	let positivo = 0;
+	let negativo = 0;
+	let seguir;
+	let acumulador = 0;
+	let contador = 0;
+	let promedio;
+	let promedio2;
+	let diferencia;
 
-	respuesta="si";
+	do {
+		num = parseInt(prompt("Ingrese un número"));
+		acumulador = acumulador+num
 
-	while(respuesta=="si")
-	{
-		
-		respuesta=prompt("desea continuar?");
-	}//fin del while
+		if (num < 0) {
+			contador++
+			negativo = negativo + num;
+		}
+		else if (num > 0) {
+			contador--
+			positivo = positivo + num;
+		}
+		seguir = prompt("Quiere continuar?");
+	} while (seguir == 's');
 
-	document.write("la suma de negativos es :"+sumaNegativos);
+	promedio = positivo / contador;
+	promedio2 = negativo / contador;
+
+	document.write("La suma de los numeros positivos es: "+ positivo);
+	document.write("El promedio de los positivos es: "+promedio);
+	document.write("La suma de los numeros negativos es: "+negativo);
+	document.write("El promedio de los negativos es: "+promedio2);
+	document.write("La diferencia de positivos y negativos es: "+positivos-negativos);
+
 }//FIN DE LA FUNCIÓN
