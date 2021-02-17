@@ -14,19 +14,20 @@ function mostrar() {
 	let precio;
 	let cantidad;
 	let contador = 0;
-	let acumulador = 0;
+	let acumulador;
 	let acumulador2 = 0;
 	let acumulador3 = 0;
-	while (contador < 5) {
+
+	while (contador < 2) {
 		producto = prompt("Ingrese el nombre del producto");
-		acumulador =+ contador;
-		precio = prompt("Ingrese el precio");
-		acumulador2 =+ contador;
-		cantidad = prompt("Ingrese la cantidad");
-		acumulador3 =+ contador;
+		acumulador =+ producto;
+		precio = parseInt(prompt("Ingrese el precio"));
+		acumulador2 =+ precio;
+		cantidad = parseInt(prompt("Ingrese la cantidad"));
+		acumulador3 =+ cantidad;
 		contador++;
 
 	}
 
-	alert(producto + precio + cantidad);
+	console.log(`Los ${producto} cuestan $${precio} y hay ${cantidad} unidades`);
 }

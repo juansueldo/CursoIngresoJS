@@ -3,17 +3,14 @@ al presionar el botón
 pedir un número entre 0 y 9 inclusive.*/
 function mostrar() {
 	let num;
-	let acumulador = 0;
-	let contador = 1;
 
+	num = parseInt(prompt("Ingrese un valor"));
 
-	while (contador <= 2) {
-		num = parseInt(prompt("Ingrese un valor"));
-		contador++;
-		if (num >= 0 || num <= 9) {
-			acumulador = acumulador + num;
-		}
+	while (num < 0 || num > 9 ) {
+		num = parseInt(prompt("No es un valor válido, ingrese nuevamente un valor"));
+	
 	}
-	document.getElementById("txtIdNumero").value = acumulador;
+	alert("Es un valor válido");
+	document.getElementById("txtIdNumero").value = num;
 
 }//FIN DE LA FUNCIÓN
