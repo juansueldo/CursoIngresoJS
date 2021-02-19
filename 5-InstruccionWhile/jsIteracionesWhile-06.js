@@ -16,4 +16,16 @@ function mostrar() {
 
   document.getElementById("txtIdSuma").value = acumulador;
   document.getElementById("txtIdPromedio").value = promedio
+  /*let acumulador = 0;
+  let contador = 0;
+
+  while(contador < 5){
+    acumulador += parseInt(prompt("Ingrese un número: "));
+    acumulador +=;
+
+    contador++;
+  }
+  document.getElementById("txtIdSuma").value = acumulador;
+  document.getElementById("txtIdPromedio").value = acumulador / contador;*/
+
 } //FIN DE LA FUNCIÓN
