@@ -15,20 +15,20 @@ let precio;
 let cantidad;
 let marca;
 let fabricante;
-let flagAlcohol = 0;
-let alcoholBarato;
-let cantidadAlcoholBarato;
-let fabricanteAlcoholBarato;
-let tipoMayorCantidad;
-let contadorAlcohol = 0;
-let contadorBarbijo = 0;
-let contadorJabon = 0;
 let acumuladorAlcohol = 0;
 let acumuladorBarbijo = 0;
 let acumuladorJabon = 0;
-let promedioCompra;
+let contadorAlcohol = 0;
+let contadorBarbijo = 0;
+let contadorJabon = 0;
+let flag = 0;
+let alcoholBarato = 0;
+let cantidadAlcoholBarato = 0;
+let fabricanteAlcoholBarato = "No se ingresaron alcoholes";
+let promedio;
+let mayorTipo;
 
-for(let i = 0; i < 1; i++){
+for(let i = 0; i < 5; i++){
 	tipo = prompt("Ingrese el tipo (alcohol, barbijo, jabon)");
 	while(isNaN(tipo) == false || tipo != "alcohol" && tipo != "barbijo" && tipo != "jabon") {
 		tipo = prompt("Error. Ingrese el tipo (alcohol, barbijo, jabon)");
@@ -48,38 +48,39 @@ for(let i = 0; i < 1; i++){
 		case "alcohol":
 			acumuladorAlcohol += cantidad;
 			contadorAlcohol++;
-			if(flagAlcohol = 0 || precio < alcoholBarato){
+
+			if(flag == 0 || precio < alcoholBarato){
 				alcoholBarato = precio;
 				cantidadAlcoholBarato = cantidad;
 				fabricanteAlcoholBarato = fabricante;
-				flagAlcohol = 1;
+				flag = 1;
 			}
 			break;
+
 		case "barbijo":
 			acumuladorBarbijo += cantidad;
-			contadorBarbijo++;
+			contadorBarbijo ++;
 			break;
+
 		case "jabon":
 			acumuladorJabon += cantidad;
-			contadorJabon++;
+			contadorJabon ++;
 			break;
-		}
 	}
-	if(acumuladorAlcohol > acumuladorBarbijo && acumuladorAlcohol > acumuladorJabon){
-		tipoMayorCantidad = "alcohol";
-		promedioCompra = acumuladorAlcohol / contadorJabon;
-	}
-	else if(acumuladorBarbijo >= acumuladorAlcohol && acumuladorBarbijo > acumuladorJabon){
-		tipoMayorCantidad = "barbijo";
-		promedioCompra = acumuladorBarbijo / contadorBarbijo;
-	}
-	else{
-		tipoMayorCantidad = "jabon";
-		promedioCompra = acumuladorJabon / contadorJabon;
-	}
-
-
-	console.log("A - Del más barato de los alcohol, la cantidad es " + cantidadAlcoholBarato + " y el fabricante es " + fabricanteAlcoholBarato);
-	console.log("B - Del tipo con más unidades, el promedio por compra es " + promedioCompra);
+}
+if(acumuladorAlcohol > acumuladorBarbijo && acumuladorAlcohol > acumuladorJabon){
+	mayorTipo = "alcohol"
+	promedio = acumuladorAlcohol / contadorAlcohol;
+}
+else if(acumuladorBarbijo >= acumuladorAlcohol && acumuladorBarbijo > acumuladorJabon){
+	mayorTipo = "barbijo"
+	promedio = acumuladorBarbijo / contadorBarbijo;
+}
+else{
+	mayorTipo = "jabon"
+	promedio = acumuladorJabon / contadorJabon;
+}
+	console.log("A - Del más barato de los alcohol $" + alcoholBarato + ", la cantidad es " + cantidadAlcoholBarato + " y el fabricante es " + fabricanteAlcoholBarato );
+	console.log("B - Del tipo con más unidades "+ mayorTipo + ", el promedio por compra es " + promedio);
 	console.log("C - La cantidad total jabones es " + acumuladorJabon);
 }
