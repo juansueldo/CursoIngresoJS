@@ -12,21 +12,28 @@ c) Cuántas unidades de Barbijos se compraron en total*/
 
 function mostrar()
 {
+//datos que solicitamos
 let tipo;
 let precio;
 let cantidad;
 let marca;
 let fabricante;
+
+//acumuladores y contadores
 let acumuladorAlcohol = 0;
 let acumuladorBarbijo = 0;
 let acumuladorJabon = 0;
 let contadorAlcohol = 0;
 let contadorBarbijo = 0;
-let contadorJabon = 0
+let contadorJabon = 0;
+
+//para buscar el jabon mas caro
 let flag = 0;
 let jabonCaro = 0;
 let cantidadJabonCaro = 0;
 let fabricanteJabonCaro = "NO SE INGRESARON JABONES";
+
+//para buscar el tipo con mas cantidad y el promedio
 let promedio;
 let tipoMaxCantidad;
 
@@ -83,7 +90,5 @@ else{
 console.log("El más caro de los jabones cuesta $"+jabonCaro+" la cantidad de unidades es "+cantidadJabonCaro+" y el fabricante es "+fabricanteJabonCaro);
 console.log("El tipo con más unidades es "+tipoMaxCantidad+" y el promedio de compra es "+promedio);
 console.log("Unidades de barbijos compradas "+(acumuladorBarbijo/contadorBarbijo));
-//a) Del más caro de los jabones, la cantidad de unidades y el fabricante
-//b) Del tipo de producto con más unidades en total de la compra, el promedio por compra
-//c) Cuántas unidades de Barbijos se compraron en total*/
+
 }

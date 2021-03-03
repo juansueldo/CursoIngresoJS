@@ -12,23 +12,32 @@ d) Informar el tipo con mas cantidad de bolsas.
 f) El tipo mas caro*/
 function mostrar()
 {
+//variables pedir los datos
 let tipo;
 let cantidad;
 let precio;
 let descuento;
 let importe;
+let seguir;
+
+//totales
 let totalBruto = 0;
 let totalNeto;
+
+//acumuladores
 let acumuladorArena = 0;
 let acumuladorCal = 0;
 let acumuladorCemento = 0;
+let acumBolsas = 0;
+
+//para caulcular el precio más caro
 let flag = 1;
 let precioCaro;
 let tipoCaro;
 let tipoMayorCantidad;
-let acumBolsas = 0;
-let seguir;
 
+
+//ingreso de datos y validación
 do{
   tipo = prompt("Ingrese el tipo a validar (arena, cal, cemento)");
   while(isNaN(tipo) == false || tipo != "arena" && tipo != "cal" && tipo != "cemento"){

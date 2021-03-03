@@ -30,9 +30,9 @@ function mostrar()
 		while(isNaN(edad) || edad <= 0){
 			edad = parseInt(prompt("Error. Ingrese la edad"));
 		}
-		sexo = prompt("Ingrese el sexo (f o m)");
+		sexo = prompt("Ingrese el sexo (f o m)").toLocaleLowerCase();
 		while(isNaN(sexo) == false || sexo != 'f' && sexo != 'm'){
-			sexo = prompt("Error. Ingrese el sexo (f o m)");
+			sexo = prompt("Error. Ingrese el sexo (f o m)").toLocaleLowerCase();
 		}
 		estadoCivil = prompt("Ingrese el estado civil (soltero, casado, viudo)");
 		while(isNaN(estadoCivil) == false || estadoCivil != "soltero" && estadoCivil != "casado" && estadoCivil != "viudo"){
