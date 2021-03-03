@@ -79,6 +79,10 @@ do{
 			nombreMaxNota = nombre;
 			flag = 0;
 		}
+		else{
+			notaMax = 0;
+			nombreMaxNota = "No se ingresaron sexo f o nb";
+		}
 		if(tipo == "libre" && (flagEdad || edad < joven)){
 			joven = edad;
 			nombreJoven = nombre;
